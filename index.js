@@ -5,12 +5,18 @@ import { up } from "./src/navigation/up.js";
 import { cd } from "./src/navigation/cd.js";
 import { ls } from "./src/navigation/ls.js";
 import { getOsInfo } from "./src/os/os.js";
+import { cat } from "./src/fs/cat.js";
+import { add } from "./src/fs/add.js";
+import { hash } from "./src/hash/hash.js";
 
 const modules = {
   up,
   cd,
   ls,
   os: getOsInfo,
+  cat,
+  add,
+  hash,
 };
 
 const userName = process.env.npm_config_username || "User";
@@ -44,7 +50,7 @@ rl.on("line", async (input) => {
       console.log("Invalid command");
     }
   } catch (error) {
-    console.log("Operation failed");
+    console.log("Operation failed", command, args);
   }
 
   printCurrentDirectory();

@@ -11,6 +11,8 @@ import { hash } from "./src/hash/hash.js";
 import { mkdir } from "./src/fs/mkdir.js";
 import { rn } from "./src/fs/rn.js";
 import { rm } from "./src/fs/rm.js";
+import { cp } from "./src/fs/cp.js";
+
 
 
 const modules = {
@@ -23,7 +25,8 @@ const modules = {
   mkdir,
   hash,
   rn,
-  rm  
+  rm, 
+  cp
 };
 
 const userName = process.env.npm_config_username || "User";

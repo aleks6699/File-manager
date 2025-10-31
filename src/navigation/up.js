@@ -1,6 +1,6 @@
-import { cwd, chdir } from "process";
-import path from "path";
-import { platform } from "os";
+import { cwd, chdir } from "node:process";
+import path from "node:path";
+import { platform } from "node:os";
 
 const isRootDirectory = () => {
   const currentDir = cwd();

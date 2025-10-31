@@ -1,6 +1,6 @@
-import process from "process";
-import readline from "readline";
-import os from "os";
+import process from "node:process";
+import readline from "node:readline";
+import os from "node:os";
 import { up } from "./src/navigation/up.js";
 import { cd } from "./src/navigation/cd.js";
 import { ls } from "./src/navigation/ls.js";
@@ -8,6 +8,8 @@ import { getOsInfo } from "./src/os/os.js";
 import { cat } from "./src/fs/cat.js";
 import { add } from "./src/fs/add.js";
 import { hash } from "./src/hash/hash.js";
+import { mkdir } from "./src/fs/mkdir.js";
+
 
 const modules = {
   up,
@@ -16,6 +18,7 @@ const modules = {
   os: getOsInfo,
   cat,
   add,
+  mkdir,
   hash,
 };
 

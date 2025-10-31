@@ -1,6 +1,6 @@
-import { chdir, cwd } from "process";
-import path from "path";
-import fs from "fs/promises";
+import { chdir, cwd } from "node:process";
+import path from "node:path";
+import fs from "node:fs/promises";
 
 export const cd = async (targetPath) => {
   try {

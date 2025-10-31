@@ -1,5 +1,5 @@
-import { readdir } from "fs/promises";
-import { cwd } from "process";
+import { readdir } from "node:fs/promises";
+import { cwd } from "node:process";
 
 export const ls = async () => {
   try {

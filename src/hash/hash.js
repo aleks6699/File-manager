@@ -1,6 +1,5 @@
-// src/navigation/hash.js
-import fs from "fs";
-import crypto from "crypto";
+import fs from "node:fs";
+import crypto from "node:crypto";
 
 export const hash = (filePath) => {
   if (!filePath) {

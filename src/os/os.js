@@ -10,6 +10,7 @@ export function getOsInfo(command) {
         break;
       case "cpus":
         console.log(JSON.stringify(cpus(), null, 2)); 
+        break;
       case "homedir":
         console.log(homedir()); 
         break;

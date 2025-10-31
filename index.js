@@ -9,6 +9,7 @@ import { cat } from "./src/fs/cat.js";
 import { add } from "./src/fs/add.js";
 import { hash } from "./src/hash/hash.js";
 import { mkdir } from "./src/fs/mkdir.js";
+import { rn } from "./src/fs/rn.js";
 
 
 const modules = {
@@ -20,6 +21,7 @@ const modules = {
   add,
   mkdir,
   hash,
+  rn
 };
 
 const userName = process.env.npm_config_username || "User";

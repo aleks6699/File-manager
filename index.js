@@ -13,6 +13,8 @@ import { rn } from "./src/fs/rn.js";
 import { rm } from "./src/fs/rm.js";
 import { cp } from "./src/fs/cp.js";
 import { mv } from "./src/fs/mv.js";
+import { decompress } from "./src/zlib/decompress.js";
+import { compress } from "./src/zlib/compress.js";
 
 
 
@@ -28,7 +30,9 @@ const modules = {
   rn,
   rm, 
   cp,
-  mv
+  mv,
+  decompress,
+  compress
 };
 
 const userName = process.env.npm_config_username || "User";

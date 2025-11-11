@@ -35,7 +35,15 @@ const modules = {
   compress
 };
 
-const userName = process.env.npm_config_username || "User";
+ function getUserName() {
+  const args = process.argv.slice(2);
+  const username = args.find(arg => arg.startsWith('--username='));
+  return username ? username.split('=')[1] : 'User';
+   
+ }
+
+const userName = getUserName();
+
 process.chdir(os.homedir());
 
 console.log(`Welcome to the File Manager, ${userName}!`);
